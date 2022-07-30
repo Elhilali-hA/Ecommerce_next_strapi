@@ -1,12 +1,30 @@
 import React,  {useState, useEffect} from 'react'
 import Link from 'next/link'
+import {useRouter} from 'next/router'
+import EN from '../locale/en.json'
+import AR from '../locale/ar.json'
+
+
+
 
 const Header = () => {
+  const router = useRouter()
+  const {locale} = router
 
-  const [liColor, setliColor] = useState('black');
-  const handleClick = () => {
-    
-   setliColor(current => !current);
+  const t = locale === 'en' ? EN : AR
+
+
+  
+  const handleLanguageToggle = () => {
+    switch (locale){
+      case 'en': 
+      router.push("/", "/", {locale: 'ar'})
+      break;
+      case 'ar':
+        router.push("/", "/", {locale: 'en'})
+        break;
+    }
+
 
   };
   const [colorChange, setColorchange] = useState(false);
@@ -65,34 +83,34 @@ const Header = () => {
           <ul className="main-menu">
             <li >
               <Link href="/">
-              <a>Home</a>
+              <a>{t.navHeader.Home}</a>
               </Link>
             
             </li>
             <li>
               <Link href="/product">
-              <a >Shop</a>
+              <a >{t.navHeader.Shop}</a>
               </Link>
             </li>
             <li className="label1" data-label1="hot">
               <Link href="/shoping-cart">
-              <a >Features</a>
+              <a >{t.navHeader.Features}</a>
               </Link>
             </li>
             <li>
               <Link href="/blog">
-              <a >Blog</a>
+              <a >{t.navHeader.Blog}</a>
               </Link>
             </li>
             <li>
             <Link  href="/about">
-              <a >About</a>
+              <a >{t.navHeader.About}</a>
             </Link>
 
             </li>
             <li>
               <Link  href="/contact">
-              <a>Contact</a>
+              <a>{t.navHeader.Contact}</a>
               </Link>
 
             </li>
@@ -109,6 +127,8 @@ const Header = () => {
           <a href="#" className="dis-block icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti" data-notify={0}>
             <i className="zmdi zmdi-favorite-outline" />
           </a>
+         { locale==='ar' && <button className="btn btn-outline-info ms-3" onClick={handleLanguageToggle}>EN</button>} 
+        { locale==='en' && <button className="btn btn-outline-info ms-3" onClick={handleLanguageToggle}>AR</button>}
         </div>
       </nav>
     </div>	

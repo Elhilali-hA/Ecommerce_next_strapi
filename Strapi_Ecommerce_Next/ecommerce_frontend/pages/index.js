@@ -6,7 +6,10 @@ import Banner from '../components/Banner'
 import Product from '../components/Product'
 
 
-export default function Home({ products }) {
+
+
+
+export default function Home({ products}) {
  
 console.log(products.data[0].attributes.slug)
   const data = products.data
@@ -47,13 +50,15 @@ console.log(products.data[0].attributes.slug)
 }
 
 export async function getStaticProps() {
+  
   const product_res = await fetch(`${API_URL}/api/products?populate=image`)
   console.log(product_res)
   const products = await product_res.json()
 
   return {
     props:{
-      products
+      products,
+      
     }
   }
 }

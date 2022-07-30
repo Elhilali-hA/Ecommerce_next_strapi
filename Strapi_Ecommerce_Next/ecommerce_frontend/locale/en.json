@@ -1,0 +1,10 @@
+{
+    "navHeader": {
+        "Home" : "Home",
+        "Shop": "Shop",
+        "Features": "Features",
+        "Blog": "Blog",
+        "About": "About",
+        "Contact": "Contact"
+    }
+}

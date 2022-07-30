@@ -2,6 +2,10 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  i18n: {
+    locales: ["en", "ar"], 
+    defaultLocale: "en"
+  }
 }
 
 const loaders = [
@@ -10,5 +14,7 @@ const loaders = [
     loader: 'style-loader!css-loader'
   }
 ]
+
+
 
 module.exports = nextConfig, loaders
