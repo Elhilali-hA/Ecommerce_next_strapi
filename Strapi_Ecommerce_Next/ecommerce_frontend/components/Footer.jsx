@@ -1,6 +1,12 @@
 import React from 'react'
+import EN from '../locale/en.json'
+import AR from '../locale/ar.json'
+import {useRouter} from 'next/router'
 
 const Footer = () => {
+  const router = useRouter()
+  const {locale} = router
+  const t = locale === 'en' ? EN : AR
   return (
     <div>
         <footer className="bg3 p-t-75 p-b-32">
@@ -8,64 +14,75 @@ const Footer = () => {
     <div className="row">
       <div className="col-sm-6 col-lg-3 p-b-50">
         <h4 className="stext-301 cl0 p-b-30">
-          Categories
+         {t.footerContent.Categories}
         </h4>
         <ul>
           <li className="p-b-10">
             <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
-              Women
+            {t.footerContent.Women}
+
             </a>
           </li>
           <li className="p-b-10">
             <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
-              Men
+            {t.footerContent.Men}
+
             </a>
           </li>
           <li className="p-b-10">
             <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
-              Shoes
+            {t.footerContent.Shoes}
+
             </a>
           </li>
           <li className="p-b-10">
             <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
-              Watches
+            {t.footerContent.Watches}
+
             </a>
           </li>
         </ul>
       </div>
       <div className="col-sm-6 col-lg-3 p-b-50">
         <h4 className="stext-301 cl0 p-b-30">
-          Help
+        {t.HelpContent.Help}
+
         </h4>
         <ul>
           <li className="p-b-10">
             <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
-              Track Order
+            {t.HelpContent['Track Order']}
+
             </a>
           </li>
           <li className="p-b-10">
             <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
-              Returns 
+            {t.HelpContent.Returns}
+
             </a>
           </li>
           <li className="p-b-10">
             <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
-              Shipping
+            {t.HelpContent.Shipping}
+
             </a>
           </li>
           <li className="p-b-10">
             <a href="#" className="stext-107 cl7 hov-cl1 trans-04">
-              FAQs
+            {t.HelpContent.FAQs}
+
             </a>
           </li>
         </ul>
       </div>
       <div className="col-sm-6 col-lg-3 p-b-50">
         <h4 className="stext-301 cl0 p-b-30">
-          GET IN TOUCH
+        {t.GetonTouch.title}
+
         </h4>
         <p className="stext-107 cl7 size-201">
-          Any questions? Let us know in store at 8th floor, 379 Hudson St, New York, NY 10018 or call us on (+1) 96 716 6879
+        {t.GetonTouch.content}
+
         </p>
         <div className="p-t-27">
           <a href="#" className="fs-18 cl7 hov-cl1 trans-04 m-r-16">
@@ -81,7 +98,8 @@ const Footer = () => {
       </div>
       <div className="col-sm-6 col-lg-3 p-b-50">
         <h4 className="stext-301 cl0 p-b-30">
-          Newsletter
+        {t.Newsletter.title}
+
         </h4>
         <form>
           <div className="wrap-input1 w-full p-b-4">
@@ -90,7 +108,8 @@ const Footer = () => {
           </div>
           <div className="p-t-18">
             <button className="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-              Subscribe
+            {t.Newsletter.subscribeButton}
+
             </button>
           </div>
         </form>

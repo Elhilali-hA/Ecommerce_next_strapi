@@ -1,13 +1,21 @@
 import React from 'react'
+import EN from '../locale/en.json'
+import AR from '../locale/ar.json'
+import {useRouter} from 'next/router'
 
 const Contact = () => {
+  const router = useRouter()
+  const {locale} = router
+  const t = locale === 'en' ? EN : AR
+
+
   return (
     <div>
     <div>
   {/* Title page */}
-  <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{backgroundImage: 'url("images/bg-01.jpg")'}}>
+  <section className="bg-img1 txt-center p-lr-15 p-tb-92" style={{backgroundImage: 'url("/images/bg-01.jpg")'}}>
     <h2 className="ltext-105 cl0 txt-center">
-      Contact
+      {t.Contact.title}
     </h2>
   </section>	
   {/* Content page */}
@@ -17,17 +25,18 @@ const Contact = () => {
         <div className="size-210 bor10 p-lr-70 p-t-55 p-b-70 p-lr-15-lg w-full-md">
           <form>
             <h4 className="mtext-105 cl2 txt-center p-b-30">
-              Send Us A Message
+            {t.Contact.InputTitle}
+
             </h4>
             <div className="bor8 m-b-20 how-pos4-parent">
-              <input className="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder="Your Email Address" />
-              <img className="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="ICON" />
+              <img className="how-pos4 pointer-none" src="/images/icons/icon-email.png" alt="ICON" />
+              <input className="stext-111 cl2 plh3 size-116 p-l-62 p-r-30" type="text" name="email" placeholder={t.Contact.emailTitle} />
             </div>
             <div className="bor8 m-b-30">
-              <textarea className="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder="How Can We Help?" defaultValue={""} />
+              <textarea className="stext-111 cl2 plh3 size-120 p-lr-28 p-tb-25" name="msg" placeholder={t.Contact.textarea} defaultValue={""} />
             </div>
             <button className="flex-c-m stext-101 cl0 size-121 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer">
-              Submit
+            {t.Contact.SubmitButton}
             </button>
           </form>
         </div>
@@ -38,10 +47,11 @@ const Contact = () => {
             </span>
             <div className="size-212 p-t-2">
               <span className="mtext-110 cl2">
-                Address
+              {t.Contact.addressTitle}
+
               </span>
               <p className="stext-115 cl6 size-213 p-t-18">
-                Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US
+            {t.Contact.address}
               </p>
             </div>
           </div>
@@ -51,10 +61,11 @@ const Contact = () => {
             </span>
             <div className="size-212 p-t-2">
               <span className="mtext-110 cl2">
-                Lets Talk
+              {t.Contact['Lets Talk']}
+
               </span>
               <p className="stext-115 cl1 size-213 p-t-18">
-                +1 800 1236879
+                +212 629 224 865
               </p>
             </div>
           </div>
@@ -64,7 +75,8 @@ const Contact = () => {
             </span>
             <div className="size-212 p-t-2">
               <span className="mtext-110 cl2">
-                Sale Support
+              {t.Contact['Sale Support']}
+
               </span>
               <p className="stext-115 cl1 size-213 p-t-18">
                 contact@example.com

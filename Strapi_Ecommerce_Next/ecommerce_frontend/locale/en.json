@@ -6,5 +6,60 @@
         "Blog": "Blog",
         "About": "About",
         "Contact": "Contact"
+    },
+    "footerContent":{
+        "Categories": "Categories",
+        "Men": "Men",
+        "Women": "Women",
+        "Shoes": "Shoes",
+        "Watches": "Watches"
+    },
+    "HelpContent": {
+        "Help": "Help",
+        "Track Order": "Track Order",
+        "Returns" : "Returns",
+        "Shipping": "Shipping",
+        "FAQs": "FAQs"
+    },
+    "GetonTouch":{
+        "title": "Get on Touch",
+        "content": "Any questions? Let us know in store, or call us on (+212) 629 224 865"
+
+    },
+    "Newsletter":{
+        "title": "Newsletter",
+        "subscribeButton": "Subscribe"
+    },
+    "Contact":{
+        "title": "Contact Us",
+        "InputTitle": "Send Us A Message",
+        "addressTitle": "adress",
+        "emailTitle": "Your Email Address",
+        "address": "Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US",
+        "textarea":"How Can We Help?",
+        "SubmitButton": "Submit",
+        "Lets Talk":"Lets Talk",
+        "Sale Support": "Sale Support"
+         
+    },
+    "Blog":{
+
+    },
+    "About":{
+        "title": "About",
+        "Our Story": "Our Story",
+        "Our Mission": "Our Mission"
+
+    },
+    "ProductNav":{
+        "title": "All Products",
+        "Men": "Men",
+        "Women": "Women",
+        "Shoes": "Shoes",
+        "bag": "bag",
+        "Watches": "Watches",
+        "FilterButton": "Filter",
+        "SearchButton": "Search"
     }
+
 }

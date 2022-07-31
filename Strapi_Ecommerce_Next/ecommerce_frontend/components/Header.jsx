@@ -10,10 +10,6 @@ import AR from '../locale/ar.json'
 const Header = () => {
   const router = useRouter()
   const {locale} = router
-
-  const t = locale === 'en' ? EN : AR
-
-
   
   const handleLanguageToggle = () => {
     switch (locale){
@@ -27,6 +23,11 @@ const Header = () => {
 
 
   };
+
+  const t = locale === 'en' ? EN : AR
+  
+
+  
   const [colorChange, setColorchange] = useState(false);
   const changeNavbarColor = () =>{
      if(window.scrollY >= 80){
@@ -113,7 +114,8 @@ const Header = () => {
               <a>{t.navHeader.Contact}</a>
               </Link>
 
-            </li>
+            </li> 
+          
           </ul>
         </div>	
         {/* Icon header */}

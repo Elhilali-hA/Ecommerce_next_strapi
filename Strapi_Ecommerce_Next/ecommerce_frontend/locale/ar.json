@@ -6,5 +6,60 @@
         "Blog": "مقالات",
         "About": "معلومات عنا",
         "Contact": "اتصل بنا"
+    },
+    "footerContent":{
+        "Categories": "فئات",
+        "Men": "رجال",
+        "Women": "نساء",
+        "Shoes": "أحذية",
+        "Watches": "ساعات"
+    },
+    "HelpContent": {
+        "Help": "مساعدة",
+        "Track Order": "تتبع الطلب",
+        "Returns" : "عائدات",
+        "Shipping": "شحن",
+        "FAQs": "أسئلة وأجوبة"
+    },
+    "GetonTouch":{
+        "title": "تواصل معنا",
+        "content": "أي أسئلة؟ أخبرنا في المتجر أو اتصل بنا على (+212) 629224865 "
+
+    },
+    "Newsletter":{
+        "title": "النشرة الإخبارية",
+        "subscribeButton": "الإشتراك"
+    },
+    "Contact":{
+        "title": "اتصل بنا",
+        "InputTitle": "أرسل لنا رسالة",
+        "addressTitle": "العنوان",
+        "emailTitle": "عنوان بريدك  الإلكتروني",
+        "address": "Coza Store Center 8th floor, 379 Hudson St, New York, NY 10018 US",
+        "textarea":"كيف يمكن أن نساعد؟",
+        "SubmitButton": "إرسال",
+        "Lets Talk":"لنتحدث",
+        "Sale Support": "دعم المبيعات"
+         
+    },
+    "Blog":{
+
+    },
+    "About":{
+        "title": "معلومات عنا",
+        "Our Story": "قصتنا",
+        "Our Mission": "مهمتنا"
+
+    },
+    "ProductNav":{
+        "title": "المنتجات",
+        "Men": "رجال",
+        "Women": "نساء",
+        "Shoes": "أحذية",
+        "bag": "حقيبة",
+        "Watches": "ساعات",
+        "FilterButton": "Filter",
+        "SearchButton": "بحث"
     }
+
 }

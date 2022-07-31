@@ -1,6 +1,13 @@
 import React from 'react'
+import EN from '../../locale/en.json'
+import AR from '../../locale/ar.json'
+import {useRouter} from 'next/router'
 
 const index = () => {
+  const router = useRouter()
+  const {locale} = router
+  const t = locale === 'en' ? EN : AR
+
   return (
     <>
  <div className="bg0 m-t-23 p-b-140 mt-5">
@@ -8,34 +15,35 @@ const index = () => {
     <div className="flex-w flex-sb-m p-b-52">
       <div className="flex-w flex-l-m filter-tope-group m-tb-10">
         <button className="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-          All Products
+                    {t.ProductNav.title}
+
         </button>
         <button className="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-          Women
+        {t.ProductNav.Women}
         </button>
         <button className="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-          Men
+        {t.ProductNav.Men}
         </button>
         <button className="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-          Bag
+        {t.ProductNav.bag}
         </button>
         <button className="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
-          Shoes
+        {t.ProductNav.Shoes}
         </button>
         <button className="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
-          Watches
+        {t.ProductNav.Watches}
         </button>
       </div>
       <div className="flex-w flex-c-m m-tb-10">
         <div className="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
           <i className="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list" />
           <i className="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none" />
-          Filter
+          {t.ProductNav.FilterButton}
         </div>
         <div className="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
           <i className="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search" />
           <i className="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none" />
-          Search
+          {t.ProductNav.SearchButton}
         </div>
       </div>
       {/* Search product */}
@@ -209,7 +217,7 @@ const index = () => {
         {/* Block2 */}
         <div className="block2">
           <div className="block2-pic hov-img0">
-            <img src="images/product-01.jpg" alt="IMG-PRODUCT" />
+            <img src="/images/product-01.jpg" alt="IMG-PRODUCT" />
             <a href="#" className="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
               Quick View
             </a>
@@ -225,8 +233,8 @@ const index = () => {
             </div>
             <div className="block2-txt-child2 flex-r p-t-3">
               <a href="#" className="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                <img className="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
+                <img className="icon-heart1 dis-block trans-04" src="/images/icons/icon-heart-01.png" alt="ICON" />
+                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="/images/icons/icon-heart-02.png" alt="ICON" />
               </a>
             </div>
           </div>
@@ -236,7 +244,7 @@ const index = () => {
         {/* Block2 */}
         <div className="block2">
           <div className="block2-pic hov-img0">
-            <img src="images/product-02.jpg" alt="IMG-PRODUCT" />
+            <img src="/images/product-02.jpg" alt="IMG-PRODUCT" />
             <a href="#" className="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
               Quick View
             </a>
@@ -252,8 +260,8 @@ const index = () => {
             </div>
             <div className="block2-txt-child2 flex-r p-t-3">
               <a href="#" className="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                <img className="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
+                <img className="icon-heart1 dis-block trans-04" src="/images/icons/icon-heart-01.png" alt="ICON" />
+                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="/images/icons/icon-heart-02.png" alt="ICON" />
               </a>
             </div>
           </div>
@@ -263,7 +271,7 @@ const index = () => {
         {/* Block2 */}
         <div className="block2">
           <div className="block2-pic hov-img0">
-            <img src="images/product-03.jpg" alt="IMG-PRODUCT" />
+            <img src="/images/product-03.jpg" alt="IMG-PRODUCT" />
             <a href="#" className="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
               Quick View
             </a>
@@ -279,8 +287,8 @@ const index = () => {
             </div>
             <div className="block2-txt-child2 flex-r p-t-3">
               <a href="#" className="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                <img className="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
+                <img className="icon-heart1 dis-block trans-04" src="/images/icons/icon-heart-01.png" alt="ICON" />
+                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="/images/icons/icon-heart-02.png" alt="ICON" />
               </a>
             </div>
           </div>
@@ -290,7 +298,7 @@ const index = () => {
         {/* Block2 */}
         <div className="block2">
           <div className="block2-pic hov-img0">
-            <img src="images/product-06.jpg" alt="IMG-PRODUCT" />
+            <img src="/images/product-06.jpg" alt="IMG-PRODUCT" />
             <a href="#" className="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
               Quick View
             </a>
@@ -306,8 +314,8 @@ const index = () => {
             </div>
             <div className="block2-txt-child2 flex-r p-t-3">
               <a href="#" className="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                <img className="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
+                <img className="icon-heart1 dis-block trans-04" src="/images/icons/icon-heart-01.png" alt="ICON" />
+                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="/images/icons/icon-heart-02.png" alt="ICON" />
               </a>
             </div>
           </div>
@@ -317,7 +325,7 @@ const index = () => {
         {/* Block2 */}
         <div className="block2">
           <div className="block2-pic hov-img0">
-            <img src="images/product-09.jpg" alt="IMG-PRODUCT" />
+            <img src="/images/product-09.jpg" alt="IMG-PRODUCT" />
             <a href="#" className="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">
               Quick View
             </a>
@@ -333,8 +341,8 @@ const index = () => {
             </div>
             <div className="block2-txt-child2 flex-r p-t-3">
               <a href="#" className="btn-addwish-b2 dis-block pos-relative js-addwish-b2">
-                <img className="icon-heart1 dis-block trans-04" src="images/icons/icon-heart-01.png" alt="ICON" />
-                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="images/icons/icon-heart-02.png" alt="ICON" />
+                <img className="icon-heart1 dis-block trans-04" src="/images/icons/icon-heart-01.png" alt="ICON" />
+                <img className="icon-heart2 dis-block trans-04 ab-t-l" src="/images/icons/icon-heart-02.png" alt="ICON" />
               </a>
             </div>
           </div>
